@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>LINK-PARK</h1>
+        <nav>
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+        </nav>
+      </header>
+
+    <section>
+        <div class="accordion">
+            <div class="contentbx">
+                <div class="label"> <p> When sending results to parents do they get results for the whole class or get for their child/children? </p></div>
+                <div class="content">
+                    <p>Parents would only gain access to their child/children's result.     </p>
+                </div>
+            </div>
+
+            <div class="contentbx">
+                <div class="label"><p> Do parent have access to their children workstations </p></div>
+                <div class="content">
+                    <p>yes, parent do have a bit of access to their children workstation.</p>
+                </div>
+            </div>
+
+            <div class="contentbx">
+                <div class="label"><p>Does link-park provide tutors for students</p></div>
+                <div class="content">
+                    <p>No, link-park does not provide any tutor for student.</p>
+                </div>
+            </div>
+
+            <div class="contentbx">
+                <div class="label"> <p>Does link-park provide materials for students</p></div>
+                <div class="content">
+                    <p>Yes, link-park provide educative material that might aid students.</p>
+                </div>
+            </div>
+
+            <div class="contentbx">
+                <div class="label"><p>Can parents/teachers monitor their child/student learning process</p></div>
+                <div class="content">
+                    <p>Yes, learning process and curve reports are shared with teachers and parents.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script>
+        const accordion = document.getElementsByClassName('contentbx')
+
+        for (i = 0; i < accordion.length; i++){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active');
+            })
+        }
+    </script>
+</body>
+</html>

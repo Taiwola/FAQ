@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body{
+    background: #f5f5f5;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem;
+    padding: 1.25rem 2.5rem;
+    background-color: rgb(154, 154, 249);
+}
+
+header nav {
+    justify-self: end;
+}
+
+header nav a {
+    color: #333;
+    margin-left: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.accordion{
+    max-width:800px;
+}
+
+.accordion .contentbx{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentbx .label{
+    position: relative;
+    padding: 10px;
+    background-color: rgb(154, 154, 249);
+    color: #fff;
+    cursor: pointer;
+}
+
+.accordion .contentbx .label p{
+    padding: 10px 10px;
+    padding-right: 20px;
+}
+
+.accordion .contentbx .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.accordion .contentbx.active .label::before{
+    content: '-';
+}
+
+.accordion .contentbx .content{
+    position: relative;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentbx.active .content{
+    height: 100px;
+    padding: 10px;
+}
